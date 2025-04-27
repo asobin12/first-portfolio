@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>森カフェ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">🌲 森カフェ</div>
+    <nav class="nav">
+      <ul>
+        <li><a href="#">トップ</a></li>
+        <li><a href="#">森カフェについて</a></li>
+        <li><a href="pages/menu.html">メニュー</a></li>
+        <li><a href="#">店舗情報</a></li>
+        <li><a href="#">お知らせ</a></li>
+        <li><a href="pages/contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>森の中で、ゆったりとした時間を。</h1>
+      <a href="pages/menu.html" class="hero-btn fade-link">メニューを見る</a>
+    </div>
+  </section>
+  <section class="concept">
+    <div class="concept-inner">
+      <h2>森カフェについて</h2>
+      <p>
+        森カフェは、都会の喧騒から少しだけ離れて、<br>
+        自然のぬくもりを感じられる空間を目指したカフェです。<br>
+        店内には木のぬくもりとグリーンをちりばめ、<br>
+        コーヒーと共に、心落ち着くひとときをお届けします。
+      </p>
+    </div>
+  </section>
+  <script>
+    document.querySelectorAll('.fade-link').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const href = this.getAttribute('href');
+        document.body.classList.add('fade-out');
+        setTimeout(() => {
+          window.location.href = href;
+        }, 500);
+      });
+    });
+  </script>
+</body>
+</html>
